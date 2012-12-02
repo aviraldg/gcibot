@@ -54,7 +54,7 @@ class GCIBot(irc.IRCClient):
 
         links = re.findall('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', msg)
         for _ in links:
-            if 'google-melange.com' in _:
+            if ('google-melange.com' in _) or ('google-melange.appspot.com' in _):
                 r = requests.get(_)
                 s = BeautifulSoup(r.text)
                 A = {}
