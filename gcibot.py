@@ -25,7 +25,8 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-META = 'Hey, I\'m a bot written by aviraldg who inserts metadata about GCI links!'
+META = '''Hey, I\'m a bot written by aviraldg who inserts metadata about GCI links!
+Source at: https://github.com/aviraldg/gcibot.'''
 
 class GCIBot(irc.IRCClient):
     nickname = 'gcibot'
